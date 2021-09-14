@@ -4,7 +4,7 @@ public class LinkedLists {
 
 	Node head;
 	Node tail;
-
+//to add elements
 	public void push(int data) {
 		Node newNode = new Node(data);
 		if (head == null) {
@@ -16,7 +16,7 @@ public class LinkedLists {
 			newNode.next = temp;
 		}
 	}
-
+//method to append elements
 	public void append(int data) {
 		Node newnode = new Node(data);
 		if (head == null) {
@@ -28,7 +28,7 @@ public class LinkedLists {
 			temp.next = tail;
 		}
 	}
-
+//to insert elements
 	public void insert(int data) {
 		Node newnode = new Node(data);
 		if (head == null) {
@@ -41,7 +41,7 @@ public class LinkedLists {
 			this.head.next = temp;
 		}
 	}
-
+//to delete first element using pop
 	public void popFirst() {
 		if (head == null) {
 			System.out.println("\nList is empty!!!");
@@ -50,7 +50,7 @@ public class LinkedLists {
 			head = temp;
 		}
 	}
-
+//to delete last element using pop
 	public void popLast() {
 		if (head == null) {
 			System.out.println("\nList is empty!!!");
@@ -59,7 +59,7 @@ public class LinkedLists {
 			head = temp;
 		}
 	}
-
+//to search an element
 	public void searchNode(int value) {
 		Node tempNode = head;
 		int index = 1;
@@ -83,7 +83,7 @@ public class LinkedLists {
 		}
 
 	}
-
+//to insert an element 40 after 30 element in the linked list 
 	public Node insertAfter(int value, Node newNode) {
 		Node tempNode = head;
 		if (head == null) {
@@ -102,8 +102,8 @@ public class LinkedLists {
 		}
 		return tempNode;
 	}
-
-	public void deleteNode(int value) {
+//to delete element 40
+	public void delete(int value) {
 		if (this.head == null) {
 			System.out.println("Linked List is empty ");
 			return;
@@ -116,7 +116,7 @@ public class LinkedLists {
 		Node nextNode = prevNode.next.next;
 		prevNode.next = nextNode;
 	}
-
+//to find size of the list
 	public int size() {
 		if (this.head == null) {
 			System.out.println("Linked List is empty ");
@@ -130,7 +130,27 @@ public class LinkedLists {
 		}
 		return size;
 	}
-
+//to sort the list
+	public void sort() {
+		Node i = head, j = null;
+		if (head == null) {
+			System.out.println("Linked list is empty");
+			return;
+		}
+		while (i != null) {
+			j = i.next;
+			while (j != null) {
+				if (i.data > j.data) {
+					int temp = i.data;
+					i.data = j.data;
+					j.data = temp;
+				}
+				j = j.next;
+			}
+			i = i.next;
+		}
+	}
+//to print 
 	public void print() {
 		if (head == null) {
 			System.out.println("Linked List is Empty");
