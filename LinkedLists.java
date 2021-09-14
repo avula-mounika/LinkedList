@@ -60,7 +60,29 @@ public class LinkedLists {
 		}
 	}
 
-	
+	public void searchNode(int value) {
+		Node tempNode = head;
+		int index = 1;
+		boolean flag = false;
+		if (head == null)
+			System.out.println("List is empty");
+		else {
+			while (tempNode != null) {
+				if (tempNode.data == value) {
+					flag = true;
+					break;
+				}
+				index++;
+				tempNode = tempNode.next;
+			}
+		}
+		if (flag == true) {
+			System.out.println(value + " is present at " + index);
+		} else {
+			System.out.println("Element is not present");
+		}
+
+	}
 
 	public void print() {
 		if (head == null) {

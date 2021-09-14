@@ -8,7 +8,7 @@ public class LinkedListMain {
 		try (Scanner scanner = new Scanner(System.in)) {
 			System.out.println(
 					"Enter 1 to add element \nEnter 2 to append element at start \nEnter 3 to insert element in between"
-					+ "\nEnter 4 to pop an first element\nEnter 5 to pop an last element");
+					+ "\nEnter 4 to pop an first element\nEnter 5 to pop an last element\nEnter 6 to search element");
 			switch (scanner.nextInt()) {
 			case 1:
 				Operations.addElementAtStart();
@@ -25,6 +25,10 @@ public class LinkedListMain {
 			case 5:
 				Operations.deleteLastElement();
 				break;
+			case 6:
+			    Operations.findNodeBaseOnValue();
+			    break;
+			
 			}
 		}
 	}
