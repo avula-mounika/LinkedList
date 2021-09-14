@@ -1,12 +1,13 @@
 package com.bl.ll;
 
 public class Operations {
-	public static void addElementAtStart() {
+	public static LinkedLists addElementAtStart() {
 		LinkedLists linkedList = new LinkedLists();
 		linkedList.push(70);
 		linkedList.push(30);
 		linkedList.push(56);
 		linkedList.print();
+		return linkedList;
 	}
 
 	public static void appendElement() {
@@ -25,7 +26,7 @@ public class Operations {
 		linkedList.print();
 	}
 
-	public static void popElement() {
+	public static void deleteFirstElement() {
 		LinkedLists linkedlist =new LinkedLists();
         linkedlist.push(70);
         linkedlist.push(30);
@@ -33,6 +34,15 @@ public class Operations {
         linkedlist.popFirst();
         linkedlist.print();
 		
+	}
+	
+	public static void deleteLastElement() {
+		LinkedLists linkedlist =new LinkedLists();
+        linkedlist.push(70);
+        linkedlist.push(30);
+        linkedlist.push(56);
+        linkedlist.popLast();
+        linkedlist.print();
 	}
 	
 	
