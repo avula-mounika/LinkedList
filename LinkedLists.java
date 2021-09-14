@@ -1,19 +1,31 @@
 package com.bl.ll;
 
 public class LinkedLists {
-	public static void main(String[] args) {
-        Node firstNode = new Node(56);
-        Node secondNode = new Node(30);
-        Node thirdNode = new Node(70);
-        Node head = firstNode;
-        firstNode.next = secondNode;
-        secondNode.next = thirdNode;
-        Node tail = thirdNode;
+	
+		 Node head;
+		    Node tail;
+		    public void push(int data) {
+		        Node newNode = new Node(data);
+		        if (head == null) {
+		            this.head = newNode;
+		            this.tail = newNode;
+		        } else {
+		            Node temp = head;
+		            this.head = newNode;
+		            newNode.next = temp;
+		        }
+		    }
 
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.data);
-            temp = temp.next;
-        }
-    }
+		    public void print() {
+		        if (head == null) {
+		            System.out.println("Linked List is Empty");
+		        } else {
+		            Node temp = head;
+		            while (temp != null) {
+		                System.out.print(temp.data+ " ");
+		                temp = temp.next;
+		            }
+		            System.out.println();
+		        }
+      }
 }
