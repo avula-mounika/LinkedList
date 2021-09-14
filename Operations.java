@@ -17,4 +17,13 @@ public class Operations {
 		linkedList.print();
 
 	}
+	public static void insertInBetween() {
+		LinkedLists linkedList = new LinkedLists();
+		linkedList.insert(56);
+		linkedList.insert(70);
+		linkedList.insert(30);
+		linkedList.print();
+
+	}
+	
 }
