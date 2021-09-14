@@ -45,8 +45,17 @@ public class Operations {
         linkedlist.print();
 	}
 	
-	public static void findNodeBaseOnValue() {
+	public static void searchValue() {
 	    LinkedLists linkedList = addElementAtStart();
 	    linkedList.searchNode(30);
 	}
+	
+	 public static void insertAfterSearch() {
+	        System.out.println("Before Insertion");
+	        LinkedLists linkedList= addElementAtStart();
+	        Node newNode = new Node(40);
+	        Node previousNode = linkedList.insertAfter(30, newNode);
+	        System.out.println("After Insertion");
+	        linkedList.print();
+	    }
 }
