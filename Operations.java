@@ -17,7 +17,7 @@ public class Operations {
 		linkedList.append(70);
 		linkedList.print();
 	}
-	
+
 	public static void insertInBetween() {
 		LinkedLists linkedList = new LinkedLists();
 		linkedList.insert(56);
@@ -27,35 +27,49 @@ public class Operations {
 	}
 
 	public static void deleteFirstElement() {
-		LinkedLists linkedlist =new LinkedLists();
-        linkedlist.push(70);
-        linkedlist.push(30);
-        linkedlist.push(56);
-        linkedlist.popFirst();
-        linkedlist.print();
-		
+		LinkedLists linkedlist = new LinkedLists();
+		linkedlist.push(70);
+		linkedlist.push(30);
+		linkedlist.push(56);
+		linkedlist.popFirst();
+		linkedlist.print();
+
 	}
-	
+
 	public static void deleteLastElement() {
-		LinkedLists linkedlist =new LinkedLists();
-        linkedlist.push(70);
-        linkedlist.push(30);
-        linkedlist.push(56);
-        linkedlist.popLast();
-        linkedlist.print();
+		LinkedLists linkedlist = new LinkedLists();
+		linkedlist.push(70);
+		linkedlist.push(30);
+		linkedlist.push(56);
+		linkedlist.popLast();
+		linkedlist.print();
 	}
-	
+
 	public static void searchValue() {
-	    LinkedLists linkedList = addElementAtStart();
-	    linkedList.searchNode(30);
+		LinkedLists linkedList = addElementAtStart();
+		linkedList.searchNode(30);
 	}
-	
-	 public static void insertAfterSearch() {
-	        System.out.println("Before Insertion");
-	        LinkedLists linkedList= addElementAtStart();
-	        Node newNode = new Node(40);
-	        Node previousNode = linkedList.insertAfter(30, newNode);
-	        System.out.println("After Insertion");
-	        linkedList.print();
-	    }
+
+	public static LinkedLists insertAfterSearch() {
+		System.out.println("Before Insertion");
+		LinkedLists linkedList = addElementAtStart();
+		Node newNode = new Node(40);
+		Node previousNode = linkedList.insertAfter(30, newNode);
+		System.out.println("After Insertion");
+		linkedList.print();
+		return linkedList;
+	}
+
+	public static void deleteSpecificElement() {
+		System.out.println("Before deletion:");
+		LinkedLists linkedList = insertAfterSearch();
+		System.out.println("After");
+		linkedList.deleteNode(40);
+		System.out.println("After deletion:");
+		linkedList.print();
+		int size = linkedList.size();
+		System.out.println("Linked size is " + size);
+
+	}
+
 }

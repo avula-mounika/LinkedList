@@ -103,6 +103,34 @@ public class LinkedLists {
 		return tempNode;
 	}
 
+	public void deleteNode(int value) {
+		if (this.head == null) {
+			System.out.println("Linked List is empty ");
+			return;
+		}
+		Node tempNode = head;
+		while (tempNode.next.data != value) {
+			tempNode = tempNode.next;
+		}
+		Node prevNode = tempNode;
+		Node nextNode = prevNode.next.next;
+		prevNode.next = nextNode;
+	}
+
+	public int size() {
+		if (this.head == null) {
+			System.out.println("Linked List is empty ");
+			return 0;
+		}
+		Node tempNode = head;
+		int size = 1;
+		while (tempNode.next != null) {
+			size++;
+			tempNode = tempNode.next;
+		}
+		return size;
+	}
+
 	public void print() {
 		if (head == null) {
 			System.out.println("Linked List is Empty");
